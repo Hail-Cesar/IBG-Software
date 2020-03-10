@@ -1,0 +1,60 @@
+ Summary: This lab refreshes and reinforces the student's concepts and syntax of
+  C++ through performing simple input/output on a set of given data. */
+
+#include <iostream>
+#include<string> // added
+
+using namespace std;
+
+
+class Name_width_square
+{
+       
+    private:
+        int width;
+        int num_of_loops;
+        string first_name,last_name; // added
+
+    public:
+   
+        void getName()
+        {
+            cout <<"\n\nWhat is your name? " <<endl;
+            cin >> first_name >> last_name;
+        }
+   
+
+        void getWidth()
+        {
+            cout << "\n\nEnter a value for the width of a square: " <<endl;
+            cin>>width;
+        }
+   
+        void printName()
+        {
+            cout << "\n\nYour name is: "<<first_name<<" "<<last_name <<endl;
+        }
+
+        void printWidth()
+        {
+
+            cout << "The width you entered was: \n"<<width<<endl;
+        }
+
+        void getLoop()
+        { 
+       
+            cout<< "\n\nHow many times do you want this program to run? " <<endl;
+            cin>>num_of_loops;
+
+   
+            for( int i = 1; i<=num_of_loops;i++)
+            {
+                getName();
+                getWidth();
+                printName();
+                printWidth();
+           
+            }
+
+        }
